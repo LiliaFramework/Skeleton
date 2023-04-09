@@ -120,8 +120,8 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- Slows Down Spawning
 function SCHEMA:PlayerSpawnObject(client, model, skin)
-    if (client.nutNextSpawn or 0) < CurTime() then
-        client.nutNextSpawn = CurTime() + 0.75
+    if (client.liaNextSpawn or 0) < CurTime() then
+        client.liaNextSpawn = CurTime() + 0.75
     else
         if client.AdvDupe2 and client.AdvDupe2.Pasting then return true end
 

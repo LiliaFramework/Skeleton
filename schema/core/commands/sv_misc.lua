@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("advertisement", {
+lia.command.add("advertisement", {
     syntax = "<string factions> <string text>",
     onRun = function(client, arguments)
         if not arguments[1] then return "Invalid argument (#1)" end
@@ -36,7 +36,7 @@ nut.command.add("advertisement", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("announce", {
+lia.command.add("announce", {
     syntax = "<string factions> <string text>",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -57,10 +57,10 @@ nut.command.add("announce", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("checkinventory", {
+lia.command.add("checkinventory", {
     syntax = "<string target>",
     onRun = function(client, arguments)
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
         if not UserGroups.adminRanks[client:GetUserGroup()] then return "This command is only available to Admin+" end
 
         if IsValid(target) and target:getChar() and target ~= client then

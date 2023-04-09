@@ -1,11 +1,11 @@
 GM = GM or GAMEMODE
 
 function GM:PlayerCanHearPlayersVoice(listener, speaker)
-    local VoiceRadios = nut.plugin.list.radio // Leonheart's Radios
-    local ImprovedTying = nut.plugin.list.improvedtying // Leonheart's Tying
-    local ImprovedVoice = nut.plugin.list.improvedvoice // 3D Voice
+    local VoiceRadios = lia.plugin.list.radio // Leonheart's Radios
+    local ImprovedTying = lia.plugin.list.improvedtying // Leonheart's Tying
+    local ImprovedVoice = lia.plugin.list.improvedvoice // 3D Voice
     local distance = 600 * 600
-    local allowVoice = nut.config.get("allowVoice")
+    local allowVoice = lia.config.get("allowVoice")
 
     if allowVoice then
         if listener:GetPos():DistToSqr(speaker:GetPos()) < distance then

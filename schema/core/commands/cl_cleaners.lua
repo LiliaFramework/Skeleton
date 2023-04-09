@@ -1,11 +1,11 @@
-nut.command.add("cleanitems", {
+lia.command.add("cleanitems", {
     onRun = function(client, arguments) end
 })
 
-nut.command.add("cleanprops", {
+lia.command.add("cleanprops", {
     onRun = function(client, arguments) end
 })
 
-nut.command.add("cleannpcs", {
+lia.command.add("cleannpcs", {
     onRun = function(client, arguments) end
 })

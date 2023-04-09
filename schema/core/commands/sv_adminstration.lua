@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("freezeallprops", {
+lia.command.add("freezeallprops", {
     syntax = "",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -22,7 +22,7 @@ nut.command.add("freezeallprops", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("clearinv", {
+lia.command.add("clearinv", {
     syntax = "<string name>",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -33,7 +33,7 @@ nut.command.add("clearinv", {
             return false
         end
 
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
 
         if IsValid(target) and target:getChar() then
             for k, v in pairs(target:getChar():getInv():getItems()) do
@@ -46,10 +46,10 @@ nut.command.add("clearinv", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("flaggive", {
+lia.command.add("flaggive", {
     syntax = "<string name> [string flags]",
     onRun = function(client, arguments)
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
         local uniqueID = client:GetUserGroup()
 
         if not UserGroups.uaRanks[uniqueID] then
@@ -71,14 +71,14 @@ nut.command.add("flaggive", {
                 local available = ""
 
                 -- Aesthetics~~
-                for k in SortedPairs(nut.flag.list) do
+                for k in SortedPairs(lia.flag.list) do
                     if not target:getChar():hasFlags(k) then
                         available = available .. k
                     end
                 end
 
                 return client:requestString("@flagGiveTitle", "@flagGiveDesc", function(text)
-                    nut.command.run(client, "flaggive", {target:Name(), text})
+                    lia.command.run(client, "flaggive", {target:Name(), text})
                 end, available)
             end
 
@@ -89,11 +89,11 @@ nut.command.add("flaggive", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("flagtake", {
+lia.command.add("flagtake", {
     adminOnly = true,
     syntax = "<string name> [string flags]",
     onRun = function(client, arguments)
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
         local uniqueID = client:GetUserGroup()
 
         if not UserGroups.uaRanks[uniqueID] then
@@ -107,7 +107,7 @@ nut.command.add("flagtake", {
 
             if not flags then
                 return client:requestString("@flagTakeTitle", "@flagTakeDesc", function(text)
-                    nut.command.run(client, "flagtake", {target:Name(), text})
+                    lia.command.run(client, "flagtake", {target:Name(), text})
                 end, target:getChar():getFlags())
             end
 
@@ -118,11 +118,11 @@ nut.command.add("flagtake", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("flags", {
+lia.command.add("flags", {
     adminOnly = true,
     syntax = "<string name>",
     onRun = function(client, arguments)
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
         local uniqueID = client:GetUserGroup()
 
         if not UserGroups.uaRanks[uniqueID] then
@@ -138,7 +138,7 @@ nut.command.add("flags", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("findallflags", {
+lia.command.add("findallflags", {
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
 
@@ -155,7 +155,7 @@ nut.command.add("findallflags", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("musicstopglobal", {
+lia.command.add("musicstopglobal", {
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
 
@@ -173,7 +173,7 @@ nut.command.add("musicstopglobal", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("clearchat", {
+lia.command.add("clearchat", {
     adminOnly = true,
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -185,6 +185,6 @@ nut.command.add("clearchat", {
         end
 
         netstream.Start(player.GetAll(), "adminClearChat")
-        nut.log.addRaw(client:GetName() .. " has cleared the chat.")
+        lia.log.addRaw(client:GetName() .. " has cleared the chat.")
     end
 })

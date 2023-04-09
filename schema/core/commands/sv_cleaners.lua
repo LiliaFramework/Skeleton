@@ -1,4 +1,4 @@
-nut.command.add("cleanitems", {
+lia.command.add("cleanitems", {
     onRun = function(client, arguments)
         local count = 0
 
@@ -8,7 +8,7 @@ nut.command.add("cleanitems", {
             return false
         end
 
-        for k, v in pairs(ents.FindByClass("nut_item")) do
+        for k, v in pairs(ents.FindByClass("lia_item")) do
             count = count + 1
             v:Remove()
         end
@@ -17,7 +17,7 @@ nut.command.add("cleanitems", {
     end
 })
 
-nut.command.add("cleanprops", {
+lia.command.add("cleanprops", {
     onRun = function(client, arguments)
         local count = 0
 
@@ -36,7 +36,7 @@ nut.command.add("cleanprops", {
     end
 })
 
-nut.command.add("cleannpcs", {
+lia.command.add("cleannpcs", {
     onRun = function(client, arguments)
         local count = 0
 

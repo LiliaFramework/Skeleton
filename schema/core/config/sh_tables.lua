@@ -2,9 +2,9 @@
 
 SCHEMA.Disallowed = {"rope", "light", "lamp", "dynamite", "physprop", "faceposer", "stacker",}
 
-SCHEMA.RestrictedEntityList = {"prop_door_rotating", "nut_vendor",}
+SCHEMA.RestrictedEntityList = {"prop_door_rotating", "lia_vendor",}
 
-SCHEMA.blockedEntities = {"ent_chess_board", "ent_draughts_board", "rock_big", "rock_medium", "rock_small ", "nut_bodygroupcloset", "nut_craftingtable", "carvendor", "sh_teller", "permaweapons", "stockbook", "nut_stash", "valet", "nut_vendor", "telephone", "nut_salary", "spruce", "pinetree", "oaktree", "beechtree", "npc_import_drug", "cardealer", "delivery_crate", "npcdelivery", "housing_npc", "jailer_npc", "sergeant_dornan", "npctaxi",}
+SCHEMA.blockedEntities = {"ent_chess_board", "ent_draughts_board", "rock_big", "rock_medium", "rock_small ", "lia_bodygroupcloset", "lia_craftingtable", "carvendor", "sh_teller", "permaweapons", "stockbook", "lia_stash", "valet", "lia_vendor", "telephone", "lia_salary", "spruce", "pinetree", "oaktree", "beechtree", "npc_import_drug", "cardealer", "delivery_crate", "npcdelivery", "housing_npc", "jailer_npc", "sergeant_dornan", "npctaxi",}
 
 SCHEMA.FixSounds = {"doors/wood_stop1.wav", "doors/door1_move.wav", "doors/wood_move1.wav", "mp3sounds/door_wood_medium_closing_end.wav", "mp3sounds/door_swing_medium_opening.wav", "ucsounds/doors/door_wood_opn_2.wav", "ucsounds/doors/door_wood_cls_1.wav", "doors/urb_3b_manhole_open.wav",}
 

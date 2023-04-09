@@ -1,4 +1,4 @@
-nut.command.add("card", {
+lia.command.add("card", {
     syntax = "<none>",
     onRun = function(client, arguments)
         local inventory = client:getChar():getInv()
@@ -14,12 +14,12 @@ nut.command.add("card", {
         local family = {"Spades", "Hearts", "Diamonds", "Clubs"}
 
         local msg = "draws the " .. table.Random(cards) .. " of " .. table.Random(family)
-        nut.chat.send(client, "rolld", msg)
+        lia.chat.send(client, "rolld", msg)
     end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("fallover", {
+lia.command.add("fallover", {
     syntax = "[number time]",
     onRun = function(client, arguments)
         if client:InVehicle() then
@@ -42,33 +42,33 @@ nut.command.add("fallover", {
             time = nil
         end
 
-        if not IsValid(client.nutRagdoll) then
+        if not IsValid(client.liaRagdoll) then
             client:setRagdolled(true, time)
         end
     end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("roll", {
+lia.command.add("roll", {
     syntax = "[number maximum]",
     onRun = function(client, arguments)
-        nut.chat.send(client, "roll", math.random(0, math.min(tonumber(arguments[1]) or 100, 100)))
+        lia.chat.send(client, "roll", math.random(0, math.min(tonumber(arguments[1]) or 100, 100)))
     end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("chardesc", {
+lia.command.add("chardesc", {
     syntax = "<string desc>",
     onRun = function(client, arguments)
         arguments = table.concat(arguments, " ")
 
         if not arguments:find("%S") then
             return client:requestString("@chgDesc", "@chgDescDesc", function(text)
-                nut.command.run(client, "chardesc", {text})
+                lia.command.run(client, "chardesc", {text})
             end, client:getChar():getDesc())
         end
 
-        local info = nut.char.vars.desc
+        local info = lia.char.vars.desc
         local result, fault, count = info.onValidate(arguments)
         if result == false then return "@" .. fault, count end
         client:getChar():setDesc(arguments)
@@ -78,7 +78,7 @@ nut.command.add("chardesc", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("beclass", {
+lia.command.add("beclass", {
     syntax = "<string class>",
     onRun = function(client, arguments)
         local class = table.concat(arguments, " ")
@@ -87,8 +87,8 @@ nut.command.add("beclass", {
         if IsValid(client) and char then
             local num = isnumber(tonumber(class)) and tonumber(class) or -1
 
-            if nut.class.list[num] then
-                local v = nut.class.list[num]
+            if lia.class.list[num] then
+                local v = lia.class.list[num]
 
                 if char:joinClass(num) then
                     client:notifyLocalized("becomeClass", L(v.name, client))
@@ -100,8 +100,8 @@ nut.command.add("beclass", {
                     return
                 end
             else
-                for k, v in ipairs(nut.class.list) do
-                    if nut.util.stringMatches(v.uniqueID, class) or nut.util.stringMatches(L(v.name, client), class) then
+                for k, v in ipairs(lia.class.list) do
+                    if lia.util.stringMatches(v.uniqueID, class) or lia.util.stringMatches(L(v.name, client), class) then
                         if char:joinClass(k) then
                             client:notifyLocalized("becomeClass", L(v.name, client))
 
@@ -123,12 +123,12 @@ nut.command.add("beclass", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("chargetup", {
+lia.command.add("chargetup", {
     onRun = function(client, arguments)
-        local entity = client.nutRagdoll
+        local entity = client.liaRagdoll
 
-        if IsValid(entity) and entity.nutGrace and entity.nutGrace < CurTime() and entity:GetVelocity():Length2D() < 8 and not entity.nutWakingUp then
-            entity.nutWakingUp = true
+        if IsValid(entity) and entity.liaGrace and entity.liaGrace < CurTime() and entity:GetVelocity():Length2D() < 8 and not entity.liaWakingUp then
+            entity.liaWakingUp = true
 
             client:setAction("@gettingUp", 5, function()
                 if not IsValid(entity) then return end
@@ -139,7 +139,7 @@ nut.command.add("chargetup", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("givemoney", {
+lia.command.add("givemoney", {
     syntax = "<number amount>",
     onRun = function(client, arguments)
         local number = tonumber(arguments[1])
@@ -157,8 +157,8 @@ nut.command.add("givemoney", {
             if not client:getChar():hasMoney(amount) then return end
             target:getChar():giveMoney(amount)
             client:getChar():takeMoney(amount)
-            target:notifyLocalized("moneyTaken", nut.currency.get(amount))
-            client:notifyLocalized("moneyGiven", nut.currency.get(amount))
+            target:notifyLocalized("moneyTaken", lia.currency.get(amount))
+            client:notifyLocalized("moneyGiven", lia.currency.get(amount))
             client:AnimRestartGesture(GESTURE_SLOT_ATTACK_AND_RELOAD, ACT_GMOD_GESTURE_ITEM_PLACE, true)
         else
             client:notify("You need to be looking at someone!")

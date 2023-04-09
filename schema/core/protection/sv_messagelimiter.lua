@@ -7,8 +7,8 @@ netstream.Hook("msg", function(client, text)
         client:notify(string.format("Your message has been shortened due to being longer than %s characters!", charlimit))
     end
 
-    if (client.nutNextChat or 0) < CurTime() and text:find("%S") then
+    if (client.liaNextChat or 0) < CurTime() and text:find("%S") then
         hook.Run("PlayerSay", client, text)
-        client.nutNextChat = CurTime() + math.max(#text / 250, 0.4)
+        client.liaNextChat = CurTime() + math.max(#text / 250, 0.4)
     end
 end)

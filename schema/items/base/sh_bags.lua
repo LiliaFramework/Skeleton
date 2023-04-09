@@ -16,15 +16,15 @@ ITEM.functions.View = {
     onClick = function(item)
         local inventory = item:getInv()
         if not inventory then return false end
-        local panel = nut.gui["inv" .. inventory:getID()]
-        local parent = item.invID and nut.gui["inv" .. item.invID] or nil
+        local panel = lia.gui["inv" .. inventory:getID()]
+        local parent = item.invID and lia.gui["inv" .. item.invID] or nil
 
         if IsValid(panel) then
             panel:Remove()
         end
 
         if inventory then
-            local panel = nut.inventory.show(inventory, parent)
+            local panel = lia.inventory.show(inventory, parent)
 
             if IsValid(panel) then
                 panel:ShowCloseButton(true)
@@ -50,7 +50,7 @@ function ITEM:onInstanced()
         h = self.invHeight
     }
 
-    nut.inventory.instance(INVENTORY_TYPE_ID, data):next(function(inventory)
+    lia.inventory.instance(INVENTORY_TYPE_ID, data):next(function(inventory)
         self:setData("id", inventory:getID())
         hook.Run("SetupBagInventoryAccessRules", inventory)
         inventory:sync()
@@ -62,7 +62,7 @@ function ITEM:onRestored()
     local invID = self:getData("id")
 
     if invID then
-        nut.inventory.loadByID(invID):next(function(inventory)
+        lia.inventory.loadByID(invID):next(function(inventory)
             hook.Run("SetupBagInventoryAccessRules", inventory)
             self:resolveInvAwaiters(inventory)
         end)
@@ -73,12 +73,12 @@ function ITEM:onRemoved()
     local invID = self:getData("id")
 
     if invID then
-        nut.inventory.deleteByID(invID)
+        lia.inventory.deleteByID(invID)
     end
 end
 
 function ITEM:getInv()
-    return nut.inventory.instances[self:getData("id")]
+    return lia.inventory.instances[self:getData("id")]
 end
 
 function ITEM:onSync(recipient)
@@ -93,7 +93,7 @@ function ITEM.postHooks:drop()
     local invID = self:getData("id")
 
     if invID then
-        net.Start("nutInventoryDelete")
+        net.Start("liaInventoryDelete")
         net.WriteType(invID)
         net.Send(self.player)
     end

@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charsetdesc", {
+lia.command.add("charsetdesc", {
     syntax = "<string name> <string desc>",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -10,18 +10,18 @@ nut.command.add("charsetdesc", {
             return false
         end
 
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
         if not IsValid(target) then return end
         if not target:getChar() then return "No character loaded" end
         local arg = table.concat(arguments, " ", 2)
 
         if not arg:find("%S") then
             return client:requestString("Change " .. target:Nick() .. "'s Description", "Enter new description", function(text)
-                nut.command.run(client, "charsetdesc", {arguments[1], text})
+                lia.command.run(client, "charsetdesc", {arguments[1], text})
             end, target:getChar():getDesc())
         end
 
-        local info = nut.char.vars.desc
+        local info = lia.char.vars.desc
         local result, fault, count = info.onValidate(arg)
         if result == false then return "@" .. fault, count end
         target:getChar():setDesc(arg)
@@ -31,7 +31,7 @@ nut.command.add("charsetdesc", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charsetattrib", {
+lia.command.add("charsetattrib", {
     syntax = "<string charname> <string attribname> <number level>",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -47,14 +47,14 @@ nut.command.add("charsetattrib", {
         local attribNumber = arguments[3]
         attribNumber = tonumber(attribNumber)
         if not attribNumber or not isnumber(attribNumber) then return L("invalidArg", client, 3) end
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
 
         if IsValid(target) then
             local char = target:getChar()
 
             if char then
-                for k, v in pairs(nut.attribs.list) do
-                    if nut.util.stringMatches(L(v.name, client), attribName) or nut.util.stringMatches(k, attribName) then
+                for k, v in pairs(lia.attribs.list) do
+                    if lia.util.stringMatches(L(v.name, client), attribName) or lia.util.stringMatches(k, attribName) then
                         char:setAttrib(k, math.abs(attribNumber))
                         client:notifyLocalized("attribSet", target:Name(), L(v.name, client), math.abs(attribNumber))
 
@@ -67,7 +67,7 @@ nut.command.add("charsetattrib", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charaddattrib", {
+lia.command.add("charaddattrib", {
     syntax = "<string charname> <string attribname> <number level>",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -83,14 +83,14 @@ nut.command.add("charaddattrib", {
         local attribNumber = arguments[3]
         attribNumber = tonumber(attribNumber)
         if not attribNumber or not isnumber(attribNumber) then return L("invalidArg", client, 3) end
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
 
         if IsValid(target) then
             local char = target:getChar()
 
             if char then
-                for k, v in pairs(nut.attribs.list) do
-                    if nut.util.stringMatches(L(v.name, client), attribName) or nut.util.stringMatches(k, attribName) then
+                for k, v in pairs(lia.attribs.list) do
+                    if lia.util.stringMatches(L(v.name, client), attribName) or lia.util.stringMatches(k, attribName) then
                         char:updateAttrib(k, math.abs(attribNumber))
                         client:notifyLocalized("attribUpdate", target:Name(), L(v.name, client), math.abs(attribNumber))
 
@@ -103,7 +103,7 @@ nut.command.add("charaddattrib", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("plytransfer", {
+lia.command.add("plytransfer", {
     syntax = "<string name> <string faction>",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -114,16 +114,16 @@ nut.command.add("plytransfer", {
             return false
         end
 
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
         local name = table.concat(arguments, " ", 2)
         if IsValid(target) and target == client and uniqueID == "plat" then return "Your rank cannot target itself with these commands." end
 
         if IsValid(target) and target:getChar() then
-            local faction = nut.faction.teams[name]
+            local faction = lia.faction.teams[name]
 
             if not faction then
-                for k, v in pairs(nut.faction.indices) do
-                    if nut.util.stringMatches(L(v.name, client), name) then
+                for k, v in pairs(lia.faction.indices) do
+                    if lia.util.stringMatches(L(v.name, client), name) then
                         faction = v
                         break
                     end
@@ -148,7 +148,7 @@ nut.command.add("plytransfer", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charsetname", {
+lia.command.add("charsetname", {
     syntax = "<string name> [string newName]",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -159,12 +159,12 @@ nut.command.add("charsetname", {
             return false
         end
 
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
         if IsValid(target) and target == client and uniqueID == "plat" then return "Your rank cannot target itself with these commands." end
 
         if IsValid(target) and not arguments[2] then
             return client:requestString("@chgName", "@chgNameDesc", function(text)
-                nut.command.run(client, "charsetname", {target:Name(), text})
+                lia.command.run(client, "charsetname", {target:Name(), text})
             end, target:Name())
         end
 
@@ -179,7 +179,7 @@ nut.command.add("charsetname", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charsetmodel", {
+lia.command.add("charsetmodel", {
     syntax = "<string name> <string model>",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -191,7 +191,7 @@ nut.command.add("charsetmodel", {
         end
 
         if not arguments[2] then return L("invalidArg", client, 2) end
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
         if IsValid(target) and target == client and uniqueID == "plat" then return "Your rank cannot target itself with these commands." end
 
         if IsValid(target) and target:getChar() then
@@ -203,7 +203,7 @@ nut.command.add("charsetmodel", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charsetskin", {
+lia.command.add("charsetskin", {
     syntax = "<string name> [number skin]",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -215,7 +215,7 @@ nut.command.add("charsetskin", {
         end
 
         local skin = tonumber(arguments[2])
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
         if IsValid(target) and target == client and uniqueID == "plat" then return "Your rank cannot target itself with these commands." end
 
         if IsValid(target) and target:getChar() then
@@ -227,7 +227,7 @@ nut.command.add("charsetskin", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charsetbodygroup", {
+lia.command.add("charsetbodygroup", {
     syntax = "<string name> <string bodyGroup> [number value]",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -239,7 +239,7 @@ nut.command.add("charsetbodygroup", {
         end
 
         local value = tonumber(arguments[3])
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
         if IsValid(target) and target == client and uniqueID == "plat" then return "Your rank cannot target itself with these commands." end
 
         if IsValid(target) and target:getChar() then
@@ -263,7 +263,7 @@ nut.command.add("charsetbodygroup", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charban", {
+lia.command.add("charban", {
     syntax = "<string name>",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -274,7 +274,7 @@ nut.command.add("charban", {
             return false
         end
 
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
 
         if IsValid(target) then
             local char = target:getChar()
@@ -297,7 +297,7 @@ nut.command.add("charban", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charselectskin", {
+lia.command.add("charselectskin", {
     syntax = "[number skin]",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -319,12 +319,12 @@ nut.command.add("charselectskin", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charselectbodygroup", {
+lia.command.add("charselectbodygroup", {
     syntax = "<string targer> <string bodyGroup> [number value]",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
         local value = tonumber(arguments[2])
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
 
         if not UserGroups.uaRanks[uniqueID] then
             client:notify("Your rank is not high enough to use this command.")
@@ -360,11 +360,11 @@ nut.command.add("charselectbodygroup", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charforceunequip", {
+lia.command.add("charforceunequip", {
     syntax = "<string name>",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
 
         if not UserGroups.uaRanks[uniqueID] then
             client:notify("Your rank is not high enough to use this command.")
@@ -385,7 +385,7 @@ nut.command.add("charforceunequip", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("chargetmoney", {
+lia.command.add("chargetmoney", {
     syntax = "<string name>",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -396,7 +396,7 @@ nut.command.add("chargetmoney", {
             return false
         end
 
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
 
         if IsValid(target) and target:getChar() then
             local char = target:getChar()
@@ -408,7 +408,7 @@ nut.command.add("chargetmoney", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("chargetmodel", {
+lia.command.add("chargetmodel", {
     syntax = "<string name>",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -419,7 +419,7 @@ nut.command.add("chargetmodel", {
             return false
         end
 
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
 
         if IsValid(target) and target:getChar() then
             client:notify(target:GetModel())
@@ -430,7 +430,7 @@ nut.command.add("chargetmodel", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("checkallmoney", {
+lia.command.add("checkallmoney", {
     syntax = "<string charname>",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -450,7 +450,7 @@ nut.command.add("checkallmoney", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("bringlostitems", {
+lia.command.add("bringlostitems", {
     syntax = "",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -462,7 +462,7 @@ nut.command.add("bringlostitems", {
         end
 
         for k, v in pairs(ents.FindInSphere(client:GetPos(), 500)) do
-            if v:GetClass() == "nut_item" then
+            if v:GetClass() == "lia_item" then
                 v:SetPos(client:GetPos())
             end
         end
@@ -470,7 +470,7 @@ nut.command.add("bringlostitems", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("logs", {
+lia.command.add("logs", {
     adminOnly = false,
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -486,7 +486,7 @@ nut.command.add("logs", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("chargiveitem", {
+lia.command.add("chargiveitem", {
     syntax = "<string name> <string item>",
     onRun = function(client, arguments)
         local rank = client:GetUserGroup()
@@ -498,14 +498,14 @@ nut.command.add("chargiveitem", {
         end
 
         if not arguments[2] then return L("invalidArg", client, 2) end
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
 
         if IsValid(target) and target:getChar() then
             local uniqueID = arguments[2]:lower()
 
-            if not nut.item.list[uniqueID] then
-                for k, v in SortedPairs(nut.item.list) do
-                    if nut.util.stringMatches(v.name, uniqueID) then
+            if not lia.item.list[uniqueID] then
+                for k, v in SortedPairs(lia.item.list) do
+                    if lia.util.stringMatches(v.name, uniqueID) then
                         uniqueID = k
                         break
                     end
@@ -530,7 +530,7 @@ nut.command.add("chargiveitem", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charsetmoney", {
+lia.command.add("charsetmoney", {
     syntax = "<string target> <number amount>",
     onRun = function(client, arguments)
         local uniqueID = client:GetUserGroup()
@@ -543,7 +543,7 @@ nut.command.add("charsetmoney", {
 
         local amount = tonumber(arguments[2])
         if not amount or not isnumber(amount) or amount < 0 then return "@invalidArg", 2 end
-        local target = nut.command.findPlayer(client, arguments[1])
+        local target = lia.command.findPlayer(client, arguments[1])
 
         if IsValid(target) then
             local char = target:getChar()
@@ -551,21 +551,21 @@ nut.command.add("charsetmoney", {
             if char and amount then
                 amount = math.Round(amount)
                 char:setMoney(amount)
-                client:notifyLocalized("setMoney", target:Name(), nut.currency.get(amount))
+                client:notifyLocalized("setMoney", target:Name(), lia.currency.get(amount))
             end
         end
     end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("getpos", {
+lia.command.add("getpos", {
     onRun = function(client, arguments)
         client:ChatPrint("MY POSITION: " .. tostring(client:GetPos()))
     end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("doorname", {
+lia.command.add("doorname", {
     onRun = function(client, arguments)
         local tr = util.TraceLine(util.GetPlayerTrace(client))
 
@@ -576,10 +576,10 @@ nut.command.add("doorname", {
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("factionlist", {
+lia.command.add("factionlist", {
     syntax = "<string text>",
     onRun = function(client, arguments)
-        for k, v in ipairs(nut.faction.indices) do
+        for k, v in ipairs(lia.faction.indices) do
             client:ChatPrint("NAME: " .. v.name .. " ID: " .. v.uniqueID)
         end
     end

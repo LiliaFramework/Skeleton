@@ -1,7 +1,7 @@
 ------------------------------------------------------------------------------------------------------------------------
 -- SETS NAME ON THE SERVER LIST
 function SCHEMA:GetGameDescription()
-    return "Lilia - Skeleton"
+    return "lia - Skeleton"
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -51,7 +51,7 @@ end
 ------------------------------------------------------------------------------------------------------------------------
 -- Prevents Item Collide Crashes
 function SCHEMA:ShouldCollide(f, t)
-    if (t:GetClass() == "nut_item" and f:GetClass() == "prop_physics") and (t:GetClass() == "nut_item" and f:IsPlayer()) and (f:GetClass() == "nut_item" and (t:GetClass() == "nut_item" or (t:GetClass() == "gmod_sent_vehicle_fphysics_wheel" or t:GetClass() == "gmod_sent_vehicle_fphysics_base"))) or (t:GetClass() == "nut_item" and (f:GetClass() == "nut_item" or (f:GetClass() == "gmod_sent_vehicle_fphysics_wheel" or f:GetClass() == "gmod_sent_vehicle_fphysics_base"))) then return false end
+    if (t:GetClass() == "lia_item" and f:GetClass() == "prop_physics") and (t:GetClass() == "lia_item" and f:IsPlayer()) and (f:GetClass() == "lia_item" and (t:GetClass() == "lia_item" or (t:GetClass() == "gmod_sent_vehicle_fphysics_wheel" or t:GetClass() == "gmod_sent_vehicle_fphysics_base"))) or (t:GetClass() == "lia_item" and (f:GetClass() == "lia_item" or (f:GetClass() == "gmod_sent_vehicle_fphysics_wheel" or f:GetClass() == "gmod_sent_vehicle_fphysics_base"))) then return false end
 end
 
 ------------------------------------------------------------------------------------------------------------------------

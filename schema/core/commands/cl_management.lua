@@ -1,129 +1,129 @@
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charsetdesc", {
+lia.command.add("charsetdesc", {
     syntax = "<string name> <string desc>",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charsetattrib", {
+lia.command.add("charsetattrib", {
     syntax = "<string charname> <string attribname> <number level>",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charaddattrib", {
+lia.command.add("charaddattrib", {
     syntax = "<string charname> <string attribname> <number level>",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("plytransfer", {
+lia.command.add("plytransfer", {
     syntax = "<string name> <string faction>",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charsetname", {
+lia.command.add("charsetname", {
     syntax = "<string name> [string newName]",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charsetmodel", {
+lia.command.add("charsetmodel", {
     syntax = "<string name> <string model>",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charsetskin", {
+lia.command.add("charsetskin", {
     syntax = "<string name> [number skin]",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charsetbodygroup", {
+lia.command.add("charsetbodygroup", {
     syntax = "<string name> <string bodyGroup> [number value]",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charban", {
+lia.command.add("charban", {
     syntax = "<string name>",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charselectskin", {
+lia.command.add("charselectskin", {
     syntax = "[number skin]",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charselectbodygroup", {
+lia.command.add("charselectbodygroup", {
     syntax = "<string targer> <string bodyGroup> [number value]",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charforceunequip", {
+lia.command.add("charforceunequip", {
     syntax = "<string name>",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("chargetmoney", {
+lia.command.add("chargetmoney", {
     syntax = "<string name>",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("chargetmodel", {
+lia.command.add("chargetmodel", {
     syntax = "<string name>",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("checkallmoney", {
+lia.command.add("checkallmoney", {
     syntax = "<string charname>",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("bringlostitems", {
+lia.command.add("bringlostitems", {
     syntax = "",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("logs", {
+lia.command.add("logs", {
     adminOnly = false,
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("chargiveitem", {
+lia.command.add("chargiveitem", {
     syntax = "<string name> <string item>",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("charsetmoney", {
+lia.command.add("charsetmoney", {
     syntax = "<string target> <number amount>",
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("getpos", {
+lia.command.add("getpos", {
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("doorname", {
+lia.command.add("doorname", {
     onRun = function(client, arguments) end
 })
 
 -------------------------------------------------------------------------------------------------------------------------
-nut.command.add("factionlist", {
+lia.command.add("factionlist", {
     syntax = "<string text>",
     onRun = function(client, arguments) end
 })

@@ -12,7 +12,7 @@ function SCHEMA:EntityTakeDamage(target, dmginfo)
     if IsValid(inflictor) and (inflictor:GetClass() == "gmod_sent_vehicle_fphysics_base" or inflictor:GetClass() == "gmod_sent_vehicle_fphysics_wheel") and not IsValid(target:GetVehicle()) then
         dmginfo:ScaleDamage(0)
 
-        if not IsValid(target.nutRagdoll) then
+        if not IsValid(target.liaRagdoll) then
             target:setRagdolled(true, 5)
         end
     end
@@ -21,7 +21,7 @@ end
 -------------------------------------------------------------------------------------------------------------------------
 -- Prevents infinite Money Glitch
 function SCHEMA:CanDeleteChar(ply, char)
-    if char:getMoney() < nut.config.get("defMoney", 0) or ply:getNetVar("restricted") then return true end
+    if char:getMoney() < lia.config.get("defMoney", 0) or ply:getNetVar("restricted") then return true end
 end
 
 ------------------------------------------------------------------------------------------------------------------------

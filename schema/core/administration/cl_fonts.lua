@@ -1,4 +1,4 @@
-function SCHEMA:LoadNutFonts(font, genericFont)
+function SCHEMA:LoadLiliaFonts(font, genericFont)
     surface.CreateFont("MAIN_Font32", {
         font = "Roboto Condensed",
         extended = false,

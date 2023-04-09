@@ -15,7 +15,7 @@ end)
 net.Receive("OpenInvMenu", function()
     local target = net.ReadEntity()
     local index = net.ReadType()
-    local targetInv = nut.inventory.instances[index]
+    local targetInv = lia.inventory.instances[index]
     local myInv = LocalPlayer():getChar():getInv()
     local inventoryDerma = targetInv:show()
     inventoryDerma:SetTitle(target:getChar():getName() .. "'s Inventory")
@@ -30,7 +30,7 @@ end)
 
 -------------------------------------------------------------------------------------------------------------------------
 netstream.Hook("adminClearChat", function()
-    local chat = nut.plugin.list["chatbox"]
+    local chat = lia.plugin.list["chatbox"]
 
     if chat and IsValid(chat.panel) then
         chat.panel:Remove()
