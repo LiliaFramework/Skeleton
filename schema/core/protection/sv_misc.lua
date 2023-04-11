@@ -66,6 +66,7 @@ end
 function SCHEMA:InitializedPlugins()
     timer.Simple(3, function()
         RunConsoleCommand("ai_serverragdolls", "1")
+        SCHEMA_COMMANDS = true
     end)
 end
 
