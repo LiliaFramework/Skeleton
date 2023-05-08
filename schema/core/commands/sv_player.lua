@@ -165,3 +165,19 @@ lia.command.add("givemoney", {
         end
     end
 })
+
+-------------------------------------------------------------------------------------------------------------------------
+lia.command.add("dropmoney", {
+    syntax = "<number amount>",
+    onRun = function(client, arguments)
+        local amount = tonumber(arguments[1])
+        if not amount or not isnumber(amount) or amount < 1 then return "@invalidArg", 1 end
+        amount = math.Round(amount)
+        if not client:getChar():hasMoney(amount) then return end
+        client:getChar():takeMoney(amount)
+        local money = nut.currency.spawn(client:getItemDropPos(), amount)
+        money.client = client
+        money.charID = client:getChar():getID()
+        client:doGesture(GESTURE_SLOT_ATTACK_AND_RELOAD, ACT_GMOD_GESTURE_ITEM_PLACE, true)
+    end
+})
