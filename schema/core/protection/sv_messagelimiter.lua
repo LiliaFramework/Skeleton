@@ -1,9 +1,9 @@
 -- Prevents Chat Spam Crashing
 netstream.Hook("msg", function(client, text)
-    local charlimit = 150
+    local charlimit = 200
 
     if utf8.len(text) > charlimit then
-        text = utf8.sub(text, 1, 150)
+        text = utf8.sub(text, 1, 200)
         client:notify(string.format("Your message has been shortened due to being longer than %s characters!", charlimit))
     end
 
