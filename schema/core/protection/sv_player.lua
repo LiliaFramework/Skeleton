@@ -29,7 +29,7 @@ end
 function SCHEMA:CanPlayerUseChar(client, character)
     if client:getChar() and client:getChar():getID() == character:getID() then return false, "You are already using this character!" end
     if client.LastDamaged and client.LastDamaged > CurTime() - 120 and character:getFaction() ~= FACTION_STAFF and client:getChar() then return false, "You took damage too recently to switch characters!" end
-    if client:getNetVar("restricted") then return false, "You can't change characters while tied, you sneaky bastard!" end
+    if client:getNetVar("restricted") then return false, "You can't change characters while tied!" end
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -60,4 +60,18 @@ function SCHEMA:PlayerLoadedChar(client, character, lastChar)
         client:getChar():giveFlags("pet")
     end
 end
+
 ------------------------------------------------------------------------------------------------------------------------
+local PROHIBITED_ACTIONS = {
+    ["Equip"] = true,
+    ["EquipUn"] = true,
+}
+
+function SCHEMA:CanPlayerInteractItem(client, action, itemObject, data)
+    local inventory = lia.inventory.instances[itemObject.invID]
+
+    if inventory and (inventory.isBag == true or inventory.isBank == true) then
+        if PROHIBITED_ACTIONS[action] then return false, "forbiddenActionStorage" end
+    end
+end
+
