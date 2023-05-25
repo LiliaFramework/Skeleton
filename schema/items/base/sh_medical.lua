@@ -8,6 +8,7 @@ ITEM.TimePerTick = 0
 ITEM.HealPerTick = 0
 
 ITEM.functions.use = {
+    name = "Use",
     sound = "items/medshot4.wav",
     onRun = function(item)
         local client = item.player
@@ -23,6 +24,7 @@ ITEM.functions.use = {
 }
 
 ITEM.functions.target = {
+    name = "Target",
     sound = "items/medshot4.wav",
     onRun = function(item)
         local client = item.player
@@ -41,5 +43,8 @@ ITEM.functions.target = {
                 end
             end)
         end
+    end,
+    onCanRun = function(item)
+        return not IsValid(item.entity)
     end
 }
