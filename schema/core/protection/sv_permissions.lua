@@ -110,27 +110,3 @@ function SCHEMA:PlayerSpawnedProp(client, model, entity)
 
     self:PlayerSpawnedEntity(client, entity)
 end
-
-------------------------------------------------------------------------------------------------------------------------
-function SCHEMA:PlayerSpawnedNPC(client, entity)
-    entity:SetCreator(client)
-    entity:SetNWString("Creator_Nick", client:Nick())
-end
-
-------------------------------------------------------------------------------------------------------------------------
--- Slows Down Spawning
-function SCHEMA:PlayerSpawnObject(client, model, skin)
-    if (client.liaNextSpawn or 0) < CurTime() then
-        client.liaNextSpawn = CurTime() + 0.75
-    else
-        if client.AdvDupe2 and client.AdvDupe2.Pasting then return true end
-
-        return false
-    end
-end
-
-------------------------------------------------------------------------------------------------------------------------
-function SCHEMA:PlayerSpawnedEntity(client, entity)
-    entity:SetNWString("Creator_Nick", client:Nick())
-    entity:SetCreator(client)
-end

@@ -50,14 +50,4 @@ function SCHEMA:PlayerSpawnVehicle(ply, model, name, table)
         end
     end
 end
-
--------------------------------------------------------------------------------------------------------------------------
---DELAYS SPAWNS
-function SCHEMA:PlayerSpawnedVehicle(ply, ent)
-    local uniqueID = ply:GetUserGroup()
-
-    if not UserGroups.trustedRanks[uniqueID] then
-        ply.NextVehicleSpawn = SysTime() + self.PlayerSpawnVehicleDelay
-    end
-end
 -------------------------------------------------------------------------------------------------------------------------
