@@ -4,7 +4,7 @@ Skeleton schema for [Lilia 1.0](https://github.com/bleonheart/Lilia)
 
 ## Getting Started
 
-To begin using Skeleton Schema, navigate to the [core](https://github.com/bleonheart/MafiaRP-Lilia/tree/main/gamemodes/mafiarp/schema/core) folder within the Schema Folder available at this link. Inside the core folder, you can find a collection of libraries that are included as part of the [schema](https://github.com/bleonheart/MafiaRP-Lilia/tree/main/gamemodes/mafiarp/schema/).
+To begin using Skeleton Schema, navigate to the [core](https://github.com/bleonheart/Lilia-Skeleton-Schema/tree/main/schema/core) folder within the Schema Folder available at this link. Inside the core folder, you can find a collection of libraries that are included as part of the [schema](https://github.com/bleonheart/Lilia-Skeleton-Schema/tree/main/schema/).
 
 To configure these libraries, make adjustments according to your specific project requirements and preferences. Customizing the settings will allow you to tailor the schema to your needs.
 
