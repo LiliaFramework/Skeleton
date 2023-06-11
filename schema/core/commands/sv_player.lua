@@ -175,7 +175,7 @@ lia.command.add("dropmoney", {
         amount = math.Round(amount)
         if not client:getChar():hasMoney(amount) then return end
         client:getChar():takeMoney(amount)
-        local money = nut.currency.spawn(client:getItemDropPos(), amount)
+        local money = lia.currency.spawn(client:getItemDropPos(), amount)
         money.client = client
         money.charID = client:getChar():getID()
         client:doGesture(GESTURE_SLOT_ATTACK_AND_RELOAD, ACT_GMOD_GESTURE_ITEM_PLACE, true)
