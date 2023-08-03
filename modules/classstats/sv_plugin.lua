@@ -1,12 +1,12 @@
-function PLUGIN:PlayerInitialSpawn(ply)
-    ply:SetVar("playerClassPluginLoaded", false)
+function MODULE:PlayerInitialSpawn(ply)
+    ply:SetVar("playerClassModuleLoaded", false)
 end
 
-function PLUGIN:PlayerLoadedChar(client)
-    client:SetVar("playerClassPluginLoaded", false)
+function MODULE:PlayerLoadedChar(client)
+    client:SetVar("playerClassModuleLoaded", false)
 end
 
-function PLUGIN:CharacterLoaded(id)
+function MODULE:CharacterLoaded(id)
     local character = nut.char.loaded[id]
 
     if character then
@@ -14,14 +14,14 @@ function PLUGIN:CharacterLoaded(id)
 
         if IsValid(client) then
             timer.Simple(1, function()
-                client:SetVar("playerClassPluginLoaded", true)
+                client:SetVar("playerClassModuleLoaded", true)
             end)
         end
     end
 end
 
 --Respawn player when they change class, you may disable this by commenting it out
-function PLUGIN:OnPlayerJoinClass(client)
+function MODULE:OnPlayerJoinClass(client)
     client:KillSilent()
 
     --Timer done to avoid bugs with viewmodel camera
@@ -30,11 +30,11 @@ function PLUGIN:OnPlayerJoinClass(client)
     end)
 end
 
-function PLUGIN:PlayerSpawn(client)
+function MODULE:PlayerSpawn(client)
     --Run short timer to give var to read correctly when change character, probably unneeded now but I left it in just to be sure
     timer.Simple(0.1, function()
         if client:Team() and (client:Team() ~= 0) then
-            local classLoaded = client:GetVar("playerClassPluginLoaded", false)
+            local classLoaded = client:GetVar("playerClassModuleLoaded", false)
 
             if classLoaded == true then
                 self:doLoadout(client)

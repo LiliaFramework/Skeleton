@@ -1,7 +1,7 @@
-PLUGIN.name = "Class Stats"
-PLUGIN.author = "Stan/Leonheart#7476"
-PLUGIN.desc = "Allows class stats to be set and applied"
-lia.util.include("sv_plugin.lua")
+MODULE.name = "Class Stats"
+MODULE.author = "Stan/Leonheart#7476"
+MODULE.desc = "Allows class stats to be set and applied"
+lia.util.include("sv_module.lua")
 lia.util.include("sv_loadout.lua")
 --[[
 If you already don't know what this does, basically it allows you to do things like:
@@ -41,4 +41,3 @@ If you're still confused by the colour, perhaps the wiki page will help you more
 
 CLASS.bloodcolor
 Use ENUMs found on wiki
---]]

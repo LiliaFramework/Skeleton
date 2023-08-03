@@ -1,4 +1,4 @@
-function PLUGIN:doLoadout(client)
+function MODULE:doLoadout(client)
     local char = client:getChar()
 
     if char then
