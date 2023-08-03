@@ -41,3 +41,4 @@ If you're still confused by the colour, perhaps the wiki page will help you more
 
 CLASS.bloodcolor
 Use ENUMs found on wiki
+--]]
