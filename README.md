@@ -8,6 +8,6 @@ To begin using Skeleton Schema, navigate to the [core](https://github.com/bleonh
 
 To configure these libraries, make adjustments according to your specific project requirements and preferences. Customizing the settings will allow you to tailor the schema to your needs.
 
-Once you have configured the libraries, you can proceed to configure the plugins and factions based on your desired functionality and features.
+Once you have configured the libraries, you can proceed to configure the modules and factions based on your desired functionality and features.
 
 If you have any questions or need assistance with the schema, or if you would like to engage with the community, feel free to join our [Discord Server](https://discord.gg/RTcVq92HsH). You can find us at this Discord invite link. We are ready to help and support you in any way we can.
