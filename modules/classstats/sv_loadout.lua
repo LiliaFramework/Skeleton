@@ -1,9 +1,10 @@
+--------------------------------------------------------------------------------------------------------
 function MODULE:doLoadout(client)
     local char = client:getChar()
 
     if char then
         local charClass = char:getClass()
-        local class = nut.class.list[charClass]
+        local class = lia.class.list[charClass]
         if not class then return end
         if class.None then return end
 
@@ -28,7 +29,7 @@ function MODULE:doLoadout(client)
 
         if class.runSpeed then
             if class.runSpeedMultiplier then
-                client:SetRunSpeed(math.Round(nut.config.get("runSpeed") * class.runSpeed))
+                client:SetRunSpeed(math.Round(lia.config.get("runSpeed") * class.runSpeed))
             else
                 client:SetRunSpeed(class.runSpeed)
             end
@@ -36,7 +37,7 @@ function MODULE:doLoadout(client)
 
         if class.walkSpeed then
             if class.walkSpeedMultiplier then
-                client:SetWalkSpeed(math.Round(nut.config.get("walkSpeed") * class.walkSpeed))
+                client:SetWalkSpeed(math.Round(lia.config.get("walkSpeed") * class.walkSpeed))
             else
                 client:SetWalkSpeed(class.walkSpeed)
             end
@@ -59,36 +60,10 @@ function MODULE:doLoadout(client)
             client:SetBloodColor(BLOOD_COLOR_RED) --This is the index for regular red blood
         end
 
-        -- Requires Parakeet's pills addon
-        if (class.pill and pk_pills) and not client.pillTransforming then
-            jlib.Announce(client, Color(255, 0, 0), "[NOTICE] ", Color(255, 255, 255), "You will fully spawn in your class in 9 seconds . . .")
-            local pillChar = client:getChar()
-            client.pillTransforming = true
-
-            timer.Simple(9, function()
-                if IsValid(client) and client:Alive() and client:getChar() == pillChar then
-                    client:SetPos(client:GetPos() + Vector(0, 0, 5)) -- Anti stuck for certain pills
-                    pk_pills.apply(client, class.pill, "lock-life")
-                    client.pillTransforming = false
-                end
-            end)
-        end
-
-        -- health override
         if class.health then
             client:SetMaxHealth(class.health)
             client:SetHealth(class.health)
         end
-
-        if class.verify and SERVER and client:getChar():getFaction() ~= nut.faction.indices[class.faction].index then
-            jlib.TransferFaction(client, class.faction) -- Transfer the player to the parent faction of class
-        end
-
-        -- Radiation immunity
-        if class.radImmune then
-            client.isImmune = true
-        else
-            client.isImmune = false
-        end
     end
 end
+--------------------------------------------------------------------------------------------------------

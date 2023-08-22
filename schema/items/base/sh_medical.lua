@@ -1,3 +1,4 @@
+--------------------------------------------------------------------------------------------------------
 ITEM.name = "Aid Items"
 ITEM.desc = "Heals you bruh."
 ITEM.model = "models/weapons/w_package.mdl"
@@ -6,7 +7,7 @@ ITEM.height = 1
 ITEM.Ticks = 0
 ITEM.TimePerTick = 0
 ITEM.HealPerTick = 0
-
+--------------------------------------------------------------------------------------------------------
 ITEM.functions.use = {
     name = "Use",
     sound = "items/medshot4.wav",
@@ -22,7 +23,7 @@ ITEM.functions.use = {
         end)
     end
 }
-
+--------------------------------------------------------------------------------------------------------
 ITEM.functions.target = {
     name = "Target",
     sound = "items/medshot4.wav",
@@ -48,3 +49,4 @@ ITEM.functions.target = {
         return not IsValid(item.entity)
     end
 }
+--------------------------------------------------------------------------------------------------------

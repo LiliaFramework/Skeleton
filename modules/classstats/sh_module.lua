@@ -1,8 +1,11 @@
+--------------------------------------------------------------------------------------------------------
 MODULE.name = "Class Stats"
 MODULE.author = "Stan/Leonheart#7476"
 MODULE.desc = "Allows class stats to be set and applied"
+--------------------------------------------------------------------------------------------------------
 lia.util.include("sv_module.lua")
 lia.util.include("sv_loadout.lua")
+--------------------------------------------------------------------------------------------------------
 --[[
 If you already don't know what this does, basically it allows you to do things like:
 CLASS.health = 200
@@ -10,7 +13,7 @@ CLASS.armor = 100
 CLASS.scale = 1.2
 CLASS.color = Vector(255 / 255, 255 / 255, 255 / 255)
 
-With multiplier true, it will take the default speed set in the NutScipt config and multiply by the amount given.
+With multiplier true, it will take the default speed set in the Lilia config and multiply by the amount given.
 If this value is false then it will set that value to the number given in "runSpeed"/"walkSpeed".
 Leaving these inputs out of a class will simply set the run and walk speeds of the NutScript config.
 CLASS.runSpeed = 1.2
