@@ -1,4 +1,4 @@
-# Lilia Skeleton Schema
+# Lilia Skeleton
  
 Skeleton schema for [Lilia 2.0](https://github.com/bleonheart/Lilia)
 
