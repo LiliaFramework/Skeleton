@@ -1,4 +1,4 @@
---------------------------------------------------------------------------------------------------------
+﻿--------------------------------------------------------------------------------------------------------
 ITEM.name = "Box of Ammunition"
 ITEM.model = "models/Items/BoxSRounds.mdl"
 ITEM.ammoAmount = 60 -- amount of the ammo
@@ -12,6 +12,7 @@ if CLIENT then
         draw.SimpleText(item.ammoAmount, "DermaDefault", w, h - 5, color_white, TEXT_ALIGN_RIGHT, TEXT_ALIGN_BOTTOM, 1, color_black)
     end
 end
+
 --------------------------------------------------------------------------------------------------------
 ITEM.functions.use = {
     name = "Load",
@@ -21,12 +22,10 @@ ITEM.functions.use = {
         local client = item.player
         weapon = client:GetActiveWeapon()
         if not IsValid(weapon) then return false end
-
         for p, q in pairs(ignoreTable) do
             if weapon:GetClass() == q then
                 client:PrintMessage(HUD_PRINTTALK, "This weapon may not be resupplied.")
                 client:EmitSound("Player.DenyWeaponSelection")
-
                 return false
             end
         end
@@ -34,7 +33,6 @@ ITEM.functions.use = {
         client:GiveAmmo(item.ammoAmount, weapon:GetPrimaryAmmoType(), false)
         client:PrintMessage(HUD_PRINTTALK, "You picked up some ammo.")
         client:EmitSound("items/ammo_pickup.wav", 110)
-
         return true
     end,
 }
