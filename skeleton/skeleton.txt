@@ -1,1 +1,7 @@
-﻿goto"skeleton"{"base"}"lilia""title""skeleton""author""Leonheart""category""rp"
+﻿"skeleton"
+{
+	"base"		"lilia"
+	"title"		"skeleton"
+	"author"	"Leonheart"
+	"category"	"rp"
+}
