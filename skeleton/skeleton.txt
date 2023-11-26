@@ -1,7 +1,7 @@
-﻿"skeletonrp"
+﻿"skeleton"
 {
 	"base"		"lilia"
-	"title"		"skeletonrp"
+	"title"		"skeleton"
 	"author"	"Leonheart"
 	"category"	"rp"
 }
