@@ -1,6 +1,6 @@
 # Lilia Skeleton
  
-Skeleton schema for [Lilia](https://github.com/Lilia-Framework/Lilia)
+Skeleton schema for [Lilia](https://github.com/LiliaFramework/Lilia)
 
 # Support
 
