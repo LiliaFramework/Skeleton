@@ -1,15 +1,5 @@
 file = {
-	"docs/hooks",
-	"lilia",
-	exclude = {"lilia/gamemode/libraries/thirdparty"}
-}
-
-module_file = {
-	Character = "lilia/gamemode/libraries/meta/character.lua",
-	Entity = "lilia/gamemode/libraries/meta/entity.lua",
-	Inventory = "lilia/gamemode/libraries/meta/inventory.lua",
-	Item = "lilia/gamemode/libraries/meta/item.lua",
-	Player = "lilia/gamemode/libraries/meta/player.lua"
+	"skeleton",
 }
 
 dir = "docs/html"
@@ -52,9 +42,10 @@ custom_display_name_handler = function(item, default_handler)
 	return default_handler(item)
 end
 
+
 new_type("hooks", "Hooks", true)
 new_type("configurations", "Configurations", true)
-new_type("panel", "Panels", true)
+new_type("factions", "Factions", true)
 tparam_alias("inventory", "Inventory")
 tparam_alias("item", "Item")
 tparam_alias("date", "date")
