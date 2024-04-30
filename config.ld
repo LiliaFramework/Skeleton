@@ -3,8 +3,8 @@ file = {
 }
 
 dir = "docs/html"
-project = "Lilia"
-title = "Lilia Documentation"
+project = "Skeleton"
+title = "Skeleton Documentation"
 no_space_before_args = true
 style = "docs/css"
 template = "docs/templates"
