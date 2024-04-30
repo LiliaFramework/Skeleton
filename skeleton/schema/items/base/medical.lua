@@ -1,11 +1,9 @@
-﻿
-ITEM.name = "Aid Items"
+﻿ITEM.name = "Aid Items"
 ITEM.desc = "Heals you bruh."
 ITEM.model = "models/weapons/w_package.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.health = 0
-
 ITEM.functions.use = {
     name = "Use",
     sound = "items/medshot4.wav",
