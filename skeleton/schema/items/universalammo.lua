@@ -4,7 +4,7 @@
 -- @items UniversalAmmunition
 
 --- This table defines the fields of the universal ammo item.
--- @table UniversalAmmo
+-- @table Configurations
 -- @realm shared
 -- @field name The name of the item | **string**
 -- @field desc The description of the item | **string**

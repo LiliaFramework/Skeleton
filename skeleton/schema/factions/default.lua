@@ -3,7 +3,7 @@
 
 --- A list of the current fields in the faction.
 -- @realm shared
--- @table FactionDetails
+-- @table Configurations
 -- @field name The name of the faction | **string**
 -- @field desc The description of the faction | **string**
 -- @field color The color representing the faction | **Color**

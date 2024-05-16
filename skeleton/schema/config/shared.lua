@@ -8,7 +8,7 @@ This is meant to override Lilia's configuration options.
 --- A list of available commands for use within the game.
 -- Each command is represented by a table with fields defining its functionality.
 -- @realm shared
--- @table Lilia_Config_List
+-- @table Configurations
 -- @field WalkSpeed: Controls how fast characters walk | **integer**
 -- @field RunSpeed: Controls how fast characters run | **integer**
 -- @field WalkRatio: Defines the walk speed ratio when holding the Alt key | **number**
