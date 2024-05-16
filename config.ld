@@ -44,8 +44,10 @@ end
 
 
 new_type("hooks", "Hooks", true)
+new_type("items", "Items", true)
+new_type("faction", "Factions", true)
 new_type("configurations", "Configurations", true)
-new_type("factions", "Factions", true)
+new_type("panel", "Panels", true)
 tparam_alias("inventory", "Inventory")
 tparam_alias("item", "Item")
 tparam_alias("date", "date")
