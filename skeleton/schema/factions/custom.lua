@@ -1,5 +1,5 @@
 ﻿--- Attributes of the custom faction.
--- @factions Custom
+-- @structurefactions Custom
 
 --- A list of the current fields in the faction.
 -- @realm shared
