@@ -1,4 +1,4 @@
-# Lilia Skeleton
+# Skeleton
  
 Skeleton schema for [Lilia](https://github.com/LiliaFramework/Lilia)
 
