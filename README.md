@@ -1,4 +1,4 @@
-<h1 align="center">Lilia - Skeleton</h1>
+<h1 align="center">Lilia - Skeleton Schema</h1>
 
 <p align="center">
   <img src="https://i.imgur.com/yY3wT30.png" alt="Lilia Icon">
