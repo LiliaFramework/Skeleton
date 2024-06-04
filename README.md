@@ -1,7 +1,7 @@
 <h1 align="center">Skeleton Schema</h1>
 
 <p align="center">
-  <img src="/logo.png" alt="Lilia Logo">
+  <img src="https://i.imgur.com/yY3wT30.png" alt="Lilia Icon">
 </p>
  
 # Support
