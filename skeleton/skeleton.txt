@@ -2,5 +2,6 @@
 {
 	"base"		"lilia"
 	"title"		"Skeleton"
-	"author"	"Leonheart"
+	"author"	"Samael"
+	"category"	"rp"
 }
