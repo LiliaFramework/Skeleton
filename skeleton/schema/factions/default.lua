@@ -1,6 +1,5 @@
 ﻿--- Attributes of the default faction.
 -- @factions Default
-
 --- A list of the current fields in the faction.
 -- @realm shared
 -- @table Configurations
@@ -29,7 +28,7 @@ FACTION.name = "Default"
 FACTION.desc = "The Default Faction."
 FACTION.color = Color(51, 117, 232)
 FACTION.isDefault = true
-FACTION.models = {"models/Humans/Group02/male_07.mdl", "models/Humans/Group02/male_07.mdl", "models/Humans/Group02/male_07.mdl", "models/Humans/Group02/male_07.mdl", "models/Humans/Group02/male_07.mdl"}
+FACTION.models = {"models/player/Barney.mdl", "models/player/gman_high.mdl", "models/player/alyx.mdl"}
 FACTION.pay = 500
 FACTION.payTimer = 3600
 FACTION.limit = 100
