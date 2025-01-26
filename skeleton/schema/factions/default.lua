@@ -1,30 +1,4 @@
-﻿
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-FACTION.name = "Default"
+﻿FACTION.name = "Default"
 FACTION.desc = "The Default Faction."
 FACTION.color = Color(51, 117, 232)
 FACTION.isDefault = true

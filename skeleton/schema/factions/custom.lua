@@ -1,32 +1,4 @@
-﻿
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-FACTION.name = "Custom Faction"
+﻿FACTION.name = "Custom Faction"
 FACTION.desc = "A Custom Faction!"
 FACTION.color = Color(255, 56, 252)
 FACTION.isDefault = false
