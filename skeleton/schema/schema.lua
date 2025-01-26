@@ -1,3 +1,3 @@
-SCHEMA.name = "Sample Schema Name"
+﻿SCHEMA.name = "Sample Schema Name"
 SCHEMA.author = "Sample Schema Author"
 SCHEMA.desc = "Sample Schema Description"
