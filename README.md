@@ -1,12 +1,29 @@
-<h1 align="center">Lilia - Skeleton Schema</h1>
+<h1 align="center">Lilia – Skeleton Schema</h1>
 
-<p align="center">
-  <img src="https://i.imgur.com/xddGdsS.png" alt="Lilia Icon" width="512" height="512">
-</p>
- 
-# Support
+Welcome to the **Skeleton Schema** for Lilia—a lightweight template to kickstart your custom schema development with minimal setup.
 
-If you have any questions or need assistance with the schema, or if you would like to engage with the community, feel free to join our [Discord Server](https://discord.gg/52MSnh39vw). You can find us at this Discord invite link. We are ready to help and support you in any way we can.
+---
 
-# Additional Modules  
-Looking for more modules? Explore and download them from the official repository at [https://github.com/LiliaFramework/Modules](https://github.com/LiliaFramework/Modules).
+## 🤝 Support
+
+Need help or want to connect with the community? Join us on Discord:  
+[Join our Discord](https://discord.gg/52MSnh39vw)
+
+---
+
+## 📚 Additional Modules
+
+Discover and download official Lilia modules:  
+[Browse Modules](https://github.com/LiliaFramework/Modules)
+
+---
+
+## 💡 Contributing
+
+We welcome your contributions to improve the Skeleton Schema:
+
+1. Fork the repository  
+2. Create a feature branch  
+3. Submit a pull request  
+
+Your feedback and enhancements help everyone build better RP experiences!
