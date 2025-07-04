@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/LiliaFramework/Lilia/blob/main/logo.png?raw=true" alt="Lilia Logo" width="200" />
+</p>
+
 <h1 align="center">Lilia – Skeleton Schema</h1>
 <p align="center">A minimal schema to help you build custom experiences on the Lilia roleplay framework.</p>
 
