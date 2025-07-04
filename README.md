@@ -24,6 +24,10 @@ Skeleton provides just enough code and configuration to start developing your ow
 
 Database settings can be configured in `schema/database.lua`. Faction examples are located in `schema/factions`.
 
+## Documentation
+
+Detailed information about the Lilia framework and this schema can be found on the [Lilia wiki](https://github.com/LiliaFramework/Lilia/wiki).
+
 ---
 
 ## Support
