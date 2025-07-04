@@ -1,29 +1,53 @@
 <h1 align="center">Lilia – Skeleton Schema</h1>
-
-Welcome to the **Skeleton Schema** for Lilia—a lightweight template to kickstart your custom schema development with minimal setup.
-
----
-
-## 🤝 Support
-
-Need help or want to connect with the community? Join us on Discord:  
-[Join our Discord](https://discord.gg/52MSnh39vw)
+<p align="center">A minimal schema to help you build custom experiences on the Lilia roleplay framework.</p>
 
 ---
 
-## 📚 Additional Modules
+## About
 
-Discover and download official Lilia modules:  
-[Browse Modules](https://github.com/LiliaFramework/Modules)
+Skeleton provides just enough code and configuration to start developing your own gamemode. Use it as a foundation and expand to suit your project.
+
+## Getting Started
+
+1. Clone or download this repository.
+2. Place the folder in `garrysmod/gamemodes` on your server or local install.
+3. Launch Garry's Mod and choose **Skeleton** from the gamemode list.
+
+Database settings can be configured in `schema/database.lua`. Faction examples are located in `schema/factions`.
 
 ---
 
-## 💡 Contributing
+## Support
 
-We welcome your contributions to improve the Skeleton Schema:
+Need help or want to engage with the community? Join our [Discord](https://discord.gg/52MSnh39vw).
 
-1. Fork the repository  
-2. Create a feature branch  
-3. Submit a pull request  
+---
 
-Your feedback and enhancements help everyone build better RP experiences!
+## Modules
+
+Official modules for Lilia can be found here:
+[https://github.com/LiliaFramework/Modules](https://github.com/LiliaFramework/Modules)
+
+---
+
+## Contributing
+
+Contributions are welcome! Fork the repository, create a branch, and submit a pull request.
+
+---
+
+## Credits
+
+Skeleton is maintained by the **LiliaFramework** team. The original template was created by **Samael**.
+
+---
+
+## License
+
+This project is distributed under the terms of the **GNU General Public License v3.0**. See the [License](./License) file for more information.
+
+---
+
+## Code of Conduct
+
+Participation in this project is subject to the [Code of Conduct](./Code_Of_Conduct.md).
