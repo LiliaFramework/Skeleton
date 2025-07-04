@@ -1,66 +1,52 @@
 <p align="center">
-  <b>Skeleton schema for the Lilia framework.</b><br/>
-  A minimal starting point to build your own roleplay experience.
+  <b>Official skeleton schema for the Lilia roleplay framework.</b><br/>
+  A minimal foundation to build your own roleplay experience.
 </p>
 
 <p align="center">
   <img src="https://github.com/LiliaFramework/Lilia/blob/main/logo.png?raw=true" alt="Lilia Logo" width="200" />
 </p>
 
-<h1 align="center">Lilia – Skeleton Schema</h1>
-<p align="center">A minimal schema to help you build custom experiences on the Lilia roleplay framework.</p>
+<h1 align="center">Lilia Skeleton</h1>
 
----
+Welcome to **Skeleton**, a barebones schema for the [Lilia framework](https://github.com/LiliaFramework/Lilia). Use it as a starting point for creating a unique Garry's Mod server with your own gameplay and content.
 
-## About
-
-Skeleton provides just enough code and configuration to start developing your own gamemode. Use it as a foundation and expand to suit your project.
-
-## Getting Started
+## 🚀 Getting Started
 
 1. Clone or download this repository.
 2. Place the folder in `garrysmod/gamemodes` on your server or local install.
 3. Launch Garry's Mod and choose **Skeleton** from the gamemode list.
 
-Database settings can be configured in `schema/database.lua`. Faction examples are located in `schema/factions`.
+Configure the database in `schema/database.lua` and check the example factions in `schema/factions`.
 
-## Documentation
+## ✨ Features
+
+- Basic schema layout ready for customization
+- Example factions demonstrating setup
+- Database settings for SQLite or MySQL
+- Compatible with official Lilia modules
+- GPL-licensed for learning and modification
+
+## 📚 Documentation
 
 Detailed information about the Lilia framework and this schema can be found on the [Lilia wiki](https://github.com/LiliaFramework/Lilia/wiki).
 
----
-
-## Support
+## 💬 Community Support
 
 Need help or want to engage with the community? Join our [Discord](https://discord.gg/52MSnh39vw).
 
----
+## 💡 Contributing
 
-## Modules
+We welcome pull requests:
 
-Official modules for Lilia can be found here:
-[https://github.com/LiliaFramework/Modules](https://github.com/LiliaFramework/Modules)
+1. Fork the repo
+2. Create a feature branch
+3. Submit a pull request
 
----
+## 🎓 Learning & Adaptation
 
-## Contributing
+Skeleton is open source under the **GNU General Public License v3.0**. See the [License](./License) file for details. You are free to study, modify and adapt it for your own server. Commercial resale is discouraged, but educational use is encouraged.
 
-Contributions are welcome! Fork the repository, create a branch, and submit a pull request.
-
----
-
-## Credits
-
-Skeleton is maintained by the **LiliaFramework** team. The original template was created by **Samael**.
-
----
-
-## License
-
-This project is distributed under the terms of the **GNU General Public License v3.0**. See the [License](./License) file for more information.
-
----
-
-## Code of Conduct
+Official modules for Lilia can be found here: [https://github.com/LiliaFramework/Modules](https://github.com/LiliaFramework/Modules)
 
 Participation in this project is subject to the [Code of Conduct](./Code_Of_Conduct.md).
