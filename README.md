@@ -1,7 +1,7 @@
 <p align="center">
   <strong>Official skeleton schema for the Lilia roleplay framework.</strong><br/>
   A minimal foundation to build your own roleplay experience.<br/><br/>
-  <img src="https://github.com/LiliaFramework/Lilia/blob/main/logo.png?raw=true" alt="Lilia Logo" width="200" />
+  <img src="https://github.com/LiliaFramework/liaIcons/blob/main/lilia.png?raw=true" alt="Lilia Logo" width="200" />
 </p>
 
 <p align="center">
