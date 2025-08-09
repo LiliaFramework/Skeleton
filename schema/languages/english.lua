@@ -1,0 +1,21 @@
+NAME = "English"
+LANGUAGE = {
+    factionDefaultName = "Default",
+    factionDefaultDesc = "The Default Faction.",
+    factionCustomName = "Custom Faction",
+    factionCustomDesc = "A Custom Faction!",
+    classSoldierName = "Soldier",
+    classSoldierDesc = "A trained military soldier.",
+    classMedicName = "Medic",
+    classMedicDesc = "A medical professional trained to heal others.",
+    classEngineerName = "Engineer",
+    classEngineerDesc = "A technical specialist with advanced tools.",
+    classCivilianName = "Civilian",
+    classCivilianDesc = "An ordinary citizen.",
+    itemSmallBagName = "Small Bag",
+    itemSmallBagDesc = "A small bag.",
+    itemBigBagName = "Big Bag",
+    itemBigBagDesc = "A big bag.",
+    itemSuitcaseName = "Suitcase",
+    itemSuitcaseDesc = "A small brown suitcase for extra storage.",
+}

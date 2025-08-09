@@ -1,0 +1,21 @@
+NAME = "Italian"
+LANGUAGE = {
+    factionDefaultName = "Predefinita",
+    factionDefaultDesc = "La Fazione Predefinita.",
+    factionCustomName = "Fazione Personalizzata",
+    factionCustomDesc = "Una Fazione Personalizzata!",
+    classSoldierName = "Soldato",
+    classSoldierDesc = "Un soldato militare addestrato.",
+    classMedicName = "Medico",
+    classMedicDesc = "Un professionista medico addestrato a curare gli altri.",
+    classEngineerName = "Ingegnere",
+    classEngineerDesc = "Uno specialista tecnico con strumenti avanzati.",
+    classCivilianName = "Civile",
+    classCivilianDesc = "Un cittadino comune.",
+    itemSmallBagName = "Borsa Piccola",
+    itemSmallBagDesc = "Una borsa piccola.",
+    itemBigBagName = "Borsa Grande",
+    itemBigBagDesc = "Una borsa grande.",
+    itemSuitcaseName = "Valigia",
+    itemSuitcaseDesc = "Una piccola valigia marrone per spazio aggiuntivo.",
+}

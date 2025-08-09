@@ -1,0 +1,21 @@
+NAME = "German"
+LANGUAGE = {
+    factionDefaultName = "Standard",
+    factionDefaultDesc = "Die Standard-Fraktion.",
+    factionCustomName = "Benutzerdefinierte Fraktion",
+    factionCustomDesc = "Eine benutzerdefinierte Fraktion!",
+    classSoldierName = "Soldat",
+    classSoldierDesc = "Ein ausgebildeter Militärsoldat.",
+    classMedicName = "Sanitäter",
+    classMedicDesc = "Ein medizinischer Fachmann, der darauf trainiert ist, andere zu heilen.",
+    classEngineerName = "Ingenieur",
+    classEngineerDesc = "Ein technischer Spezialist mit fortschrittlichen Werkzeugen.",
+    classCivilianName = "Zivilist",
+    classCivilianDesc = "Ein gewöhnlicher Bürger.",
+    itemSmallBagName = "Kleine Tasche",
+    itemSmallBagDesc = "Eine kleine Tasche.",
+    itemBigBagName = "Große Tasche",
+    itemBigBagDesc = "Eine große Tasche.",
+    itemSuitcaseName = "Koffer",
+    itemSuitcaseDesc = "Ein kleiner brauner Koffer für zusätzlichen Stauraum.",
+}

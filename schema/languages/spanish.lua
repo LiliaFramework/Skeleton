@@ -1,0 +1,21 @@
+NAME = "Spanish"
+LANGUAGE = {
+    factionDefaultName = "Por Defecto",
+    factionDefaultDesc = "La Facción Por Defecto.",
+    factionCustomName = "Facción Personalizada",
+    factionCustomDesc = "¡Una Facción Personalizada!",
+    classSoldierName = "Soldado",
+    classSoldierDesc = "Un soldado militar entrenado.",
+    classMedicName = "Médico",
+    classMedicDesc = "Un profesional médico entrenado para curar a otros.",
+    classEngineerName = "Ingeniero",
+    classEngineerDesc = "Un especialista técnico con herramientas avanzadas.",
+    classCivilianName = "Civil",
+    classCivilianDesc = "Un ciudadano común.",
+    itemSmallBagName = "Bolsa Pequeña",
+    itemSmallBagDesc = "Una bolsa pequeña.",
+    itemBigBagName = "Bolsa Grande",
+    itemBigBagDesc = "Una bolsa grande.",
+    itemSuitcaseName = "Maleta",
+    itemSuitcaseDesc = "Una pequeña maleta marrón para almacenamiento adicional.",
+}

@@ -1,0 +1,21 @@
+NAME = "French"
+LANGUAGE = {
+    factionDefaultName = "Par Défaut",
+    factionDefaultDesc = "La Faction Par Défaut.",
+    factionCustomName = "Faction Personnalisée",
+    factionCustomDesc = "Une Faction Personnalisée !",
+    classSoldierName = "Soldat",
+    classSoldierDesc = "Un soldat militaire entraîné.",
+    classMedicName = "Médecin",
+    classMedicDesc = "Un professionnel médical formé pour soigner les autres.",
+    classEngineerName = "Ingénieur",
+    classEngineerDesc = "Un spécialiste technique avec des outils avancés.",
+    classCivilianName = "Civil",
+    classCivilianDesc = "Un citoyen ordinaire.",
+    itemSmallBagName = "Petit Sac",
+    itemSmallBagDesc = "Un petit sac.",
+    itemBigBagName = "Grand Sac",
+    itemBigBagDesc = "Un grand sac.",
+    itemSuitcaseName = "Valise",
+    itemSuitcaseDesc = "Une petite valise marron pour un stockage supplémentaire.",
+}

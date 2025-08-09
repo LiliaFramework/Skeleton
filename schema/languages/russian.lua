@@ -1,0 +1,21 @@
+NAME = "Russian"
+LANGUAGE = {
+    factionDefaultName = "По умолчанию",
+    factionDefaultDesc = "Фракция по умолчанию.",
+    factionCustomName = "Пользовательская фракция",
+    factionCustomDesc = "Пользовательская фракция!",
+    classSoldierName = "Солдат",
+    classSoldierDesc = "Обученный военный солдат.",
+    classMedicName = "Медик",
+    classMedicDesc = "Медицинский специалист, обученный лечить других.",
+    classEngineerName = "Инженер",
+    classEngineerDesc = "Технический специалист с продвинутыми инструментами.",
+    classCivilianName = "Гражданский",
+    classCivilianDesc = "Обычный гражданин.",
+    itemSmallBagName = "Маленькая сумка",
+    itemSmallBagDesc = "Маленькая сумка.",
+    itemBigBagName = "Большая сумка",
+    itemBigBagDesc = "Большая сумка.",
+    itemSuitcaseName = "Чемодан",
+    itemSuitcaseDesc = "Маленький коричневый чемодан для дополнительного хранения.",
+}

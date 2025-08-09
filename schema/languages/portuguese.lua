@@ -1,0 +1,21 @@
+NAME = "Portuguese"
+LANGUAGE = {
+    factionDefaultName = "Padrão",
+    factionDefaultDesc = "A Facção Padrão.",
+    factionCustomName = "Facção Personalizada",
+    factionCustomDesc = "Uma Facção Personalizada!",
+    classSoldierName = "Soldado",
+    classSoldierDesc = "Um soldado militar treinado.",
+    classMedicName = "Médico",
+    classMedicDesc = "Um profissional médico treinado para curar outros.",
+    classEngineerName = "Engenheiro",
+    classEngineerDesc = "Um especialista técnico com ferramentas avançadas.",
+    classCivilianName = "Civil",
+    classCivilianDesc = "Um cidadão comum.",
+    itemSmallBagName = "Saco Pequeno",
+    itemSmallBagDesc = "Um saco pequeno.",
+    itemBigBagName = "Saco Grande",
+    itemBigBagDesc = "Um saco grande.",
+    itemSuitcaseName = "Mala",
+    itemSuitcaseDesc = "Uma pequena mala castanha para armazenamento extra.",
+}
