@@ -30,27 +30,6 @@
   Follow our step-by-step <a href="https://liliaframework.github.io/information/installing_the_gamemode/">installation tutorial</a> to set up this skeleton on your server.
 </p>
 
-<h2 align="center">✨ Core Features</h2>
-
-<div align="center">
-
-  **Basic Layout**
-  Ready for customization.
-
-  **Example Factions**
-  Demonstrates faction setup.
-
-  **Database Configuration**
-  Supports SQLite and MySQL.
-
-  **Module Support**
-  Works with official Lilia modules.
-
-  **GPL Licensed**
-  Free to modify and learn from.
-
-</div>
-
 <h2 align="center">📚 Documentation</h2>
 
 <p align="center">
@@ -79,11 +58,9 @@
 
 <div align="center">
 
-  Fork the repo  
-
-  Create a feature branch  
-
-  Submit a pull request  
+  1. Fork the repo  
+  2. Create a feature branch  
+  3. Submit a pull request  
 
 </div>
 
